@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputText"><button id="btn">ok</button>
+
+    <script>
+        var inputText=document.getElementById("inputText");
+        var btn=document.getElementById("btn");
+        btn.onclick=function(){
+            alert("ok");
+            console.log(inputText.value);
+        }
+    </script>
+
+
+
+
+var userName=document.getElementById("user");
+var followers=document.getElementById("followers");
+var repos=document.getElementById("repos");
+var iptvl=document.querySelector("#inptValue");
+var btnUsers=document.getElementById("btnUsers");
+var modal=document.getElementById("modal");
+var myReq= new XMLHttpRequest();
+var link="https://api.github.com/users";
+myReq.open("GET",link,"true");
+myReq.send();
+
+
+
+
+btnUsers.onclick=function(){
+   
+
+
+
+
+    
+    
+    if(myReq.status===200){
+        // var info=JSON.parse(myReq.responseText);
+        var info=JSON.parse(myReq.responseText);
+        console.log("https://api.github.com/users/"+iptvl.value);
+        
+
+      
+       
+        for(var y =0;y<4;y++){
+            
+             
+           
+        }
+       
+
+    
+        
+    
+       
+
+    }
+   
+    
+   
+
+
+        // followers.textContent=data[i].followers_url;
+        // repos.textContent=data[i].repos_url;
+    
+    modal.style.display="block";
+    
+}
+
+    
+</body>
+</html>
